@@ -38,7 +38,16 @@ public class C03Dropdown2 {
 
         // use select methods to select option
         select.selectByValue("4");
+        //select by visible text
         select.selectByVisibleText("Purple");
 
+    // isMultiple() method returns true if we can select multiple options return false otherwise.
+    System.out.println("select.isMultiple() = " + select.isMultiple());
+    WebElement elemnt2 = driver.findElement(By.id("cars"));  // false --> cannot select multiple options
+    Select select2 = new Select(elemnt2);
+    System.out.println("select2.isMultiple() = " + select2.isMultiple());  // true --> can select multiple options
 }
+
+
 }
+
